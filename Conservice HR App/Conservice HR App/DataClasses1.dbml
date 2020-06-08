@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Employees" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\mssqllocaldb;Initial Catalog=Employees;Integrated Security=True;Pooling=False" SettingsObjectName="Conservice_HR_App.Properties.Settings" SettingsPropertyName="EmployeesConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Employees" Member="Employees">
+    <Type Name="Employee">
+      <Column Name="EmployeeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Department" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="HireDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[Employment Status]" Member="Employment_Status" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Shift" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Manager" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="[Favorite Color]" Member="Favorite_Color" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
