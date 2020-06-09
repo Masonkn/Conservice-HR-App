@@ -22,16 +22,32 @@ namespace Conservice_HR_App
     {
         DataClasses1DataContext dc = new DataClasses1DataContext(Properties.Settings.Default.EmployeesConnectionString);
 
+        // Instantiates the datagrid as the databases data allows.
         public MainWindow()
         {
             InitializeComponent();
-
-            if (dc.DatabaseExists()) EmployeeDataGrid.ItemsSource = dc.Employees;
+            if (dc.DatabaseExists())
+            {
+                EmployeeDataGrid.ItemsSource = dc.Employees;
+            }
         }
+        
+        //When changes are made to the grid, they can be saved to the database by pressing the "Update Button."
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             dc.SubmitChanges();
+        }
+
+        //When SearchBox's Text is changed this method is called. 
+
+        private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Text Changed.");
+            List<Employee> people = new List<Employee>();
+            //people = (from FirstName in dc.Employees select new Employee() FirstName)
+            
+            EmployeeDataGrid.ItemsSource = people;
         }
     }
 }

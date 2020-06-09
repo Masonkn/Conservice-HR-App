@@ -5,9 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Conservice_HR_App"
         mc:Ignorable="d"
-        Title="MainWindow" Height="543" Width="1094">
+        Title="MainWindow" Background="LightGray" Height="543" Width="1094">
     <Grid>
-        <DataGrid Name ="EmployeeDataGrid" HorizontalAlignment="Left" Height="410" VerticalAlignment="Top" Width="1022" Margin="30,28,0,0"/>
+        <DataGrid Name ="EmployeeDataGrid" HorizontalAlignment="Left" Height="394" VerticalAlignment="Top" Width="1022" Margin="30,44,0,0" AutoGenerateColumns="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="EmployeeID" Binding="{Binding EmployeeID}"/>
+            </DataGrid.Columns>
+        </DataGrid>
         <Button Content="Update"  Name ="AddButton" Click="AddButton_Click" HorizontalAlignment="Left" Margin="30,456,0,0" VerticalAlignment="Top" Width="204" Height="30"/>
+        <Label Content="Search:" HorizontalAlignment="Left" Margin="35,10,0,0" VerticalAlignment="Top" Height="34" Width="60"/>
+        <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Height="34" Margin="95,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" TextChanged="SearchBox_TextChanged" AutomationProperties.Name="SearchBox"/>
     </Grid>
 </Window>
