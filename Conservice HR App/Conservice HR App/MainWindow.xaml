@@ -5,11 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Conservice_HR_App"
         mc:Ignorable="d"
-        Title="MainWindow" Background="LightGray" Height="543" Width="1094">
+        Title="My People" Background="LightGray" Height="600" Width="1300">
     <Grid>
-        <DataGrid Name ="EmployeeDataGrid" HorizontalAlignment="Left" Height="394" VerticalAlignment="Top" Width="1022" Margin="30,44,0,0" AutoGenerateColumns="True">
+        <DataGrid Name ="EmployeeDataGrid" HorizontalAlignment="Left" Height="407" VerticalAlignment="Top" Width="1172" Margin="10,44,0,0" AutoGenerateColumns="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="EmployeeID" Binding="{Binding EmployeeID}"/>
+                <DataGridTextColumn Header="LastName" Binding="{Binding LastName}"/>
+                <DataGridTextColumn Header="FirstName" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn Header="Address" Binding="{Binding Address}"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
+                <DataGridTextColumn Header="Phone" Binding="{Binding Phone}"/>
+                <DataGridTextColumn Header="Position" Binding="{Binding Position}"/>
+                <DataGridTextColumn Header="Department" Binding="{Binding Department}"/>
+                <DataGridTextColumn Header="HireDate" Binding="{Binding HireDate}"/>
+                <DataGridTextColumn Header="EndDate" Binding="{Binding EndDate}"/>
+                <DataGridCheckBoxColumn Header="Terminated" Binding="{Binding Employment_Status}"/>
+                <DataGridTextColumn Header="Shift" Binding="{Binding Shift}"/>
+                <DataGridTextColumn Header="Manager" Binding="{Binding Manager}"/>
+                <DataGridTextColumn Header="FavoriteColor" Binding="{Binding Favorite_Color}"/>
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Update"  Name ="AddButton" Click="AddButton_Click" HorizontalAlignment="Left" Margin="30,456,0,0" VerticalAlignment="Top" Width="204" Height="30"/>
