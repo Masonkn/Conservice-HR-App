@@ -7,26 +7,48 @@
         mc:Ignorable="d"
         Title="My People" Background="LightGray" Height="600" Width="1300">
     <Grid>
-        <DataGrid Name ="EmployeeDataGrid" HorizontalAlignment="Left" Height="407" VerticalAlignment="Top" Width="1172" Margin="10,44,0,0" AutoGenerateColumns="True">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="EmployeeID" Binding="{Binding EmployeeID}"/>
-                <DataGridTextColumn Header="LastName" Binding="{Binding LastName}"/>
-                <DataGridTextColumn Header="FirstName" Binding="{Binding FirstName}"/>
-                <DataGridTextColumn Header="Address" Binding="{Binding Address}"/>
-                <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
-                <DataGridTextColumn Header="Phone" Binding="{Binding Phone}"/>
-                <DataGridTextColumn Header="Position" Binding="{Binding Position}"/>
-                <DataGridTextColumn Header="Department" Binding="{Binding Department}"/>
-                <DataGridTextColumn Header="HireDate" Binding="{Binding HireDate}"/>
-                <DataGridTextColumn Header="EndDate" Binding="{Binding EndDate}"/>
-                <DataGridCheckBoxColumn Header="Terminated" Binding="{Binding Employment_Status}"/>
-                <DataGridTextColumn Header="Shift" Binding="{Binding Shift}"/>
-                <DataGridTextColumn Header="Manager" Binding="{Binding Manager}"/>
-                <DataGridTextColumn Header="FavoriteColor" Binding="{Binding Favorite_Color}"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        <Button Content="Update"  Name ="AddButton" Click="AddButton_Click" HorizontalAlignment="Left" Margin="30,456,0,0" VerticalAlignment="Top" Width="204" Height="30"/>
-        <Label Content="Search:" HorizontalAlignment="Left" Margin="35,10,0,0" VerticalAlignment="Top" Height="34" Width="60"/>
-        <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Height="34" Margin="95,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" TextChanged="SearchBox_TextChanged" AutomationProperties.Name="SearchBox"/>
+        <TabControl HorizontalAlignment="Left" Height="569" VerticalAlignment="Top" Width="1292">
+            <TabItem Header="Home">
+                <Grid Background="#FFE5E5E5" Height="72" VerticalAlignment="Bottom">
+                    <DataGrid Name ="EmployeeDataGrid" HorizontalAlignment="Left" Height="350" VerticalAlignment="Top" Width="1078" Margin="67,-415,0,0" AutoGenerateColumns="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="EmployeeID" Binding="{Binding EmployeeID}"/>
+                            <DataGridTextColumn Header="LastName" Binding="{Binding LastName}"/>
+                            <DataGridTextColumn Header="FirstName" Binding="{Binding FirstName}"/>
+                            <DataGridTextColumn Header="Address" Binding="{Binding Address}"/>
+                            <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
+                            <DataGridTextColumn Header="Phone" Binding="{Binding Phone}"/>
+                            <DataGridTextColumn Header="Position" Binding="{Binding Position}"/>
+                            <DataGridTextColumn Header="Department" Binding="{Binding Department}"/>
+                            <DataGridTextColumn Header="HireDate" Binding="{Binding HireDate}"/>
+                            <DataGridTextColumn Header="EndDate" Binding="{Binding EndDate}"/>
+                            <DataGridCheckBoxColumn Header="Terminated" Binding="{Binding Employment_Status}"/>
+                            <DataGridTextColumn Header="Shift" Binding="{Binding Shift}"/>
+                            <DataGridTextColumn Header="Manager" Binding="{Binding Manager}"/>
+                            <DataGridTextColumn Header="FavoriteColor" Binding="{Binding Favorite_Color}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Content="Submit"  Name ="AddButton" Click="AddButton_Click" HorizontalAlignment="Left" Margin="67,-60,0,0" VerticalAlignment="Top" Width="260" Height="25"/>
+                    <Label Content="Search:" HorizontalAlignment="Left" Margin="67,-454,0,0" VerticalAlignment="Top" Height="34" Width="82" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Height="18" Margin="149,-454,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" TextChanged="SearchBox_TextChanged" AutomationProperties.Name="SearchBox"/>
+
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Recruiting">
+                <Grid Background="#FFE5E5E5">
+                    <TextBlock Name="Terminated" Margin="274,151,846,294" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72">Hello</TextBlock>
+                    <Label Content="Terminated" HorizontalAlignment="Left" Margin="274,120,0,0" VerticalAlignment="Top" FontSize="24"/>
+                    <Label Content="Hired" HorizontalAlignment="Left" Margin="866,120,0,0" VerticalAlignment="Top" FontSize="24"/>
+                    <TextBlock x:Name="Hired" Margin="816,151,304,294" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72"><Run Text="Hello"/></TextBlock>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Activity Log">
+                <Grid Background="#FFE5E5E5">
+                    
+                </Grid>
+            </TabItem>
+        </TabControl>
+
     </Grid>
 </Window>
