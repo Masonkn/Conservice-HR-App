@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Conservice_HR_App"
         mc:Ignorable="d"
-        Title="My People" Background="LightGray" Height="600" Width="1300">
+        Title="My People" Background="LightGray" Height="600" Width="1424.5">
     <Grid>
-        <TabControl HorizontalAlignment="Left" Height="569" VerticalAlignment="Top" Width="1292">
+        <TabControl HorizontalAlignment="Left" Height="569" VerticalAlignment="Top" Width="1406">
             <TabItem Header="Home">
                 <Grid Background="#FFE5E5E5" Height="72" VerticalAlignment="Bottom">
-                    <DataGrid Name ="EmployeeDataGrid" HorizontalAlignment="Left" Height="350" VerticalAlignment="Top" Width="1078" Margin="67,-415,0,0" AutoGenerateColumns="True">
+                    <DataGrid Name ="EmployeeDataGrid" Height="350" VerticalAlignment="Top" Margin="67,-415,67,0" AutoGenerateColumns="True">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="EmployeeID" Binding="{Binding EmployeeID}"/>
                             <DataGridTextColumn Header="LastName" Binding="{Binding LastName}"/>
@@ -25,12 +25,12 @@
                             <DataGridCheckBoxColumn Header="Terminated" Binding="{Binding Employment_Status}"/>
                             <DataGridTextColumn Header="Shift" Binding="{Binding Shift}"/>
                             <DataGridTextColumn Header="Manager" Binding="{Binding Manager}"/>
-                            <DataGridTextColumn Header="FavoriteColor" Binding="{Binding Favorite_Color}"/>
+                            <DataGridTextColumn Header="FavoriteColor" Binding="{Binding Favorite_Color}" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <Button Content="Submit"  Name ="AddButton" Click="AddButton_Click" HorizontalAlignment="Left" Margin="67,-60,0,0" VerticalAlignment="Top" Width="260" Height="25"/>
                     <Label Content="Search:" HorizontalAlignment="Left" Margin="67,-454,0,0" VerticalAlignment="Top" Height="34" Width="82" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                    <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Height="18" Margin="149,-454,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" TextChanged="SearchBox_TextChanged" AutomationProperties.Name="SearchBox"/>
+                    <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Height="18" Margin="149,-444,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" TextChanged="SearchBox_TextChanged" AutomationProperties.Name="SearchBox"/>
 
 
                 </Grid>
@@ -45,7 +45,7 @@
             </TabItem>
             <TabItem Header="Activity Log">
                 <Grid Background="#FFE5E5E5">
-                    
+
                 </Grid>
             </TabItem>
         </TabControl>
