@@ -17,6 +17,8 @@ namespace Conservice_HR_App
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
+    /// @author Mason Nielson
+    /// Creates a simple front end for managing employees and some information about them. 
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -41,6 +43,8 @@ namespace Conservice_HR_App
             }
             
         }
+
+        //Returns a list that represents all employees currently in the database.
 
         public List<Employee> GetList()
         {
@@ -90,6 +94,8 @@ namespace Conservice_HR_App
             EmployeeDataGrid.ItemsSource = PeopleInSearch;
         }
 
+        //Runs code to establish how many emloyees have been hired and how many have been fired (terminated).
+
         private void InitializeRecruiting()
         {
             Terminated.Text = HowManyTerminated();
@@ -97,7 +103,7 @@ namespace Conservice_HR_App
         }
 
         //Counts how many people in the database have an EndDate. Currently does not adjust for the year.
-        //returns a string that is how many people are terminated.
+        //Returns a string that is how many people are terminated.
 
         private string HowManyTerminated()
         {
@@ -113,6 +119,8 @@ namespace Conservice_HR_App
                 return TerminatedThisWeek.ToString();
         }
 
+        //An overloaded method with an int in its parameters that will return an int instead of a string when called upon.
+        
         private int HowManyTerminated(int i)
         {
             int TerminatedThisWeek = 0;

@@ -155,9 +155,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="hnet.com-image.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="My People HR Conservice logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
